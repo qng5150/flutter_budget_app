@@ -1,3 +1,4 @@
+import 'package:budget/page/budget_page.dart';
 import 'package:flutter/material.dart';
 
 class MonthlyBudgetApp extends StatelessWidget {
@@ -10,7 +11,7 @@ class MonthlyBudgetApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MonthlyBudgetPage(),
     );
   }
 }
