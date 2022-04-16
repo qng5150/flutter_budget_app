@@ -11,7 +11,7 @@ class MonthlyBudgetApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MonthlyBudgetPage(),
+      home: BudgetPage(),
     );
   }
 }
