@@ -1,7 +1,6 @@
 import 'package:budget/model/monthly_expense.dart';
+import 'package:budget/utils/currency_format.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/currency_format.dart';
 
 class ExpenseList extends StatefulWidget {
   const ExpenseList({Key? key, required this.expenses}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:budget/page/budget_page.dart';
 import 'package:flutter/material.dart';
 
 class MonthlyBudgetApp extends StatelessWidget {
-  MonthlyBudgetApp({Key? key}) : super(key: key);
+  const MonthlyBudgetApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class MonthlyBudgetApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BudgetPage(),
+      home: const BudgetPage(),
     );
   }
 }

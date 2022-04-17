@@ -7,7 +7,7 @@ import 'package:budget/page/income_list.dart';
 import 'package:flutter/material.dart';
 
 class BudgetDetails extends StatefulWidget {
-  BudgetDetails({Key? key}) : super(key: key);
+  const BudgetDetails({Key? key}) : super(key: key);
 
   @override
   _BudgetDetailsState createState() {
