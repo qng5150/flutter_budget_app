@@ -1,5 +1,5 @@
-import 'package:budget/model/monthly_income.dart';
-import 'package:budget/utils/currency_format.dart';
+import 'package:create_budget/model/monthly_income.dart';
+import 'package:create_budget/utils/currency_format.dart';
 import 'package:flutter/material.dart';
 
 class IncomeList extends StatefulWidget {
@@ -64,7 +64,7 @@ class _IncomeListState extends State<IncomeList> {
                         children: [
                           Expanded(
                             flex: 5,
-                            child: Text(income.name),
+                            child: Text(income.name ?? 'No Name'),
                           ),
                           Expanded(
                             flex: 5,

@@ -1,4 +1,4 @@
-import 'package:budget/utils/currency_format.dart';
+import 'package:create_budget/utils/currency_format.dart';
 import 'package:flutter/material.dart';
 
 class BudgetTarget extends StatelessWidget {

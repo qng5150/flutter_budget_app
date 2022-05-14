@@ -1,4 +1,4 @@
-import 'package:budget/page/budget_page.dart';
+import 'package:create_budget/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 class MonthlyBudgetApp extends StatelessWidget {
@@ -6,12 +6,13 @@ class MonthlyBudgetApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
       title: 'Monthly Budget App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const BudgetPage(),
     );
   }
 }

@@ -1,6 +1,7 @@
-import 'package:budget/model/monthly_expense.dart';
-import 'package:budget/utils/currency_format.dart';
+import 'package:create_budget/model/monthly_expense.dart';
+import 'package:create_budget/utils/currency_format.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ExpenseList extends StatefulWidget {
   const ExpenseList({Key? key, required this.expenses}) : super(key: key);
@@ -49,7 +50,9 @@ class _ExpenseListState extends State<ExpenseList> {
                   size: 24.0,
                 ),
                 label: const Text('Add Expense'),
-                onPressed: () {},
+                onPressed: () {
+                  context.push('/expense');
+                },
               )
             ],
           ),
@@ -70,7 +73,7 @@ class _ExpenseListState extends State<ExpenseList> {
                         children: [
                           Expanded(
                             flex: 5,
-                            child: Text(expense.name),
+                            child: Text(expense.name ?? 'No Name'),
                           ),
                           Expanded(
                             flex: 5,

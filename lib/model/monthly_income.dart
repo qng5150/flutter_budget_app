@@ -1,4 +1,4 @@
-import 'package:budget/model/schedule.dart';
+import 'package:create_budget/model/schedule.dart';
 
 class MonthlyIncome {
   MonthlyIncome();

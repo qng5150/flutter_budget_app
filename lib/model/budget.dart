@@ -1,7 +1,6 @@
 import 'dart:collection';
-
-import 'package:budget/model/monthly_income.dart';
-import 'package:budget/model/monthly_expense.dart';
+import 'monthly_expense.dart';
+import 'monthly_income.dart';
 
 class Budget {
   Budget({required this.target});

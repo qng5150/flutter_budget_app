@@ -1,3 +1,3 @@
 import 'package:intl/intl.dart';
 
-final currencyFormat = NumberFormat("#,##0.00", "en_AU");
+final currencyFormat = NumberFormat("###,###.00", "en_US");
