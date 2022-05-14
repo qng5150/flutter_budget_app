@@ -44,16 +44,13 @@ class _ExpenseListState extends State<ExpenseList> {
                 textAlign: TextAlign.left,
               ),
               ElevatedButton.icon(
-                icon: const Icon(
-                  Icons.add,
-                  color: Colors.white,
-                  size: 24.0,
-                ),
-                label: const Text('Add Expense'),
-                onPressed: () {
-                  context.push('/expense');
-                },
-              )
+                  icon: const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                    size: 24.0,
+                  ),
+                  label: const Text('Add Expense'),
+                  onPressed: () => context.push('/budget/expense'))
             ],
           ),
           const SizedBox(height: 10),

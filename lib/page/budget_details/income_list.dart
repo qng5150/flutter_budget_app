@@ -1,6 +1,7 @@
 import 'package:create_budget/model/monthly_income.dart';
 import 'package:create_budget/utils/currency_format.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class IncomeList extends StatefulWidget {
   const IncomeList({Key? key, required this.incomeList}) : super(key: key);
@@ -44,7 +45,7 @@ class _IncomeListState extends State<IncomeList> {
                   size: 24.0,
                 ),
                 label: const Text('Add Income'),
-                onPressed: () {},
+                onPressed: () => context.push('/budget/income'),
               )
             ],
           ),
