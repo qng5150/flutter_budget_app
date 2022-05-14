@@ -1,11 +1,13 @@
+import 'dart:collection';
+
 import 'package:budget/model/monthly_income.dart';
 import 'package:budget/model/monthly_expense.dart';
 
 class Budget {
   Budget({required this.target});
 
-  List<MonthlyExpense> expenses = [];
-  List<MonthlyIncome> incomes = [];
+  LinkedHashSet<MonthlyExpense> expenses = LinkedHashSet<MonthlyExpense>();
+  LinkedHashSet<MonthlyIncome> incomes = LinkedHashSet<MonthlyIncome>();
   double netIncome = 0;
   double target;
   double monthsToAchieve = 0;
