@@ -8,8 +8,10 @@ class Budget {
   LinkedHashSet<MonthlyExpense> expenses = LinkedHashSet<MonthlyExpense>();
   LinkedHashSet<MonthlyIncome> incomes = LinkedHashSet<MonthlyIncome>();
   double netIncome = 0;
-  double target;
+  double target = 0;
   double monthsToAchieve = 0;
+  double totalIncome = 0;
+  double totalExpense = 0;
 
   void addExpense(MonthlyExpense expense) {
     expenses.add(expense);
@@ -25,14 +27,16 @@ class Budget {
 
   void _calculateNetIncome() {
     double totalIncome = 0;
-    double totalExpenses = 0;
+    double totalExpense = 0;
     for (var element in incomes) {
       totalIncome += element.monthlyIncome;
     }
     for (var element in expenses) {
-      totalExpenses += element.monthlyExpense;
+      totalExpense += element.monthlyExpense;
     }
-    netIncome = totalIncome - totalExpenses;
+    this.totalExpense = totalExpense;
+    this.totalIncome = totalIncome;
+    netIncome = totalIncome - totalExpense;
   }
 
   void _calculateTargetTime() {

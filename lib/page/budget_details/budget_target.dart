@@ -15,7 +15,7 @@ class BudgetTarget extends StatelessWidget {
   final double totalIncome;
   final double totalExpense;
   final double netIncome;
-  final int monthsToAchieve;
+  final double monthsToAchieve;
 
   @override
   Widget build(BuildContext context) {
