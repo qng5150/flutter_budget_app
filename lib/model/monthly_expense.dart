@@ -1,4 +1,5 @@
 import 'package:create_budget/model/schedule.dart';
+import 'package:uuid/uuid.dart';
 
 class MonthlyExpense {
   MonthlyExpense();
@@ -10,6 +11,7 @@ class MonthlyExpense {
     this.amount = amount;
   }
 
+  final id = const Uuid().v4();
   String? name;
   double _amount = 0;
   Schedule schedule = Schedule.monthly;
@@ -25,14 +27,11 @@ class MonthlyExpense {
   double get amount => _amount;
 
   @override
-  int get hashCode => name.hashCode + amount.hashCode + schedule.hashCode;
+  int get hashCode => id.hashCode;
 
   @override
   bool operator ==(Object other) {
-    return other is MonthlyExpense &&
-        name == other.name &&
-        _amount == other.amount &&
-        schedule == other.schedule;
+    return other is MonthlyExpense && id == other.id;
   }
 
   void _calculateMonthlyExpense() {
